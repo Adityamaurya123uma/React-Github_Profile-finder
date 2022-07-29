@@ -77,6 +77,15 @@ class App extends Component {
                 }
               ></Route>
             </Routes>
+            <Fragment>
+              <Search
+                searchUsers={this.searchUsers}
+                clearUsers={this.clearUsers}
+                showClear={users.length > 0 ? true : false}
+                setAlert={this.setAlert}
+              />
+              <User loading={loading} users={users} />
+            </Fragment>
           </div>
         </div>
       </Router>
